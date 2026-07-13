@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rooms &amp; Rates — Vintex Guest House</title>
+<meta name="description" content="Browse Single, Twin/Queen, Double, and Family rooms at Vintex Guest House in Kimana. Live USD/KSH pricing and real-time availability." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header id="site-nav"></header>
+
+<main>
+  <section class="container room-hero">
+    <div class="eyebrow fade-up">Inventory &middot; Vintex PMS</div>
+    <h1 class="h-display room-hero__title fade-up" style="animation-delay:.05s">Rooms &amp; Rates</h1>
+    <p class="room-hero__sub fade-up" style="animation-delay:.1s">
+      Four categories, twelve rooms. Availability below reflects the house
+      in real time — toggle currency in the nav to see rates in KSH.
+      Requesting a room places it in the Vintex staff queue for confirmation;
+      it does not charge you or guarantee the room until you hear back.
+    </p>
+
+    <div class="masonry" id="roomGrid"><!-- rendered by room.js --></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>&copy; 2026 Vintex Guest House, Kimana</span>
+  <span>1 USD &asymp; 128 KSH, indicative</span>
+</footer>
+
+<script src="main.js"></script>
+<script src="room.js"></script>
+<script>
+  Vintex.init('room.html');
+  RoomController.renderGrid('roomGrid');
+</script>
+</body>
+</html>
